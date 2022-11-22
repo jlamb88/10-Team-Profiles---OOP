@@ -2,7 +2,9 @@ const inquirer = require('inquirer')
 const Manager = require('./lib/manager')
 const Engineer = require('./lib/engineer')
 const Intern = require('./lib/intern')
-const funcsHTML = require('./src/generateHTML')
+const generateHTML = require('./src/generateHTML')
+const fs = require('fs')
+const path = require('path')
 
 emps = []
 
@@ -32,7 +34,7 @@ function init() {
         .then((mgrData) => {
             const { name, id, email, office } = mgrData
             manager = new Manager(name, id, email, office)
-            funcsHTML.makeManager(manager)
+            emps.push(manager)
             addEmps()
         })
 
@@ -56,7 +58,7 @@ addEmps = () => {
                 break;
             }
             case "Done": {
-                generateHTML(emps)
+                writeFile()
                 break
             }
         }
@@ -114,14 +116,16 @@ addIntern = () => {
 
     inquirer.prompt(intrnQuestions)
         .then((intData) => {
-            const { name, id, email, github } = intData
-            employee = new Intern(name, id, email, github)
+            const { name, id, email, school } = intData
+            employee = new Intern(name, id, email, school)
             emps.push(employee)
             addEmps()
         })
 }
 
-
+writeFile = () => {
+    fs.writeFileSync(path.join(__dirname, "./dist/index.html"), generateHTML(emps))
+}
 
 
 
