@@ -1,0 +1,27 @@
+{
+  "name": "module-10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlamb88/10-Team-Profiles---OOP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "bugs": {
+    "url": "https://github.com/jlamb88/10-Team-Profiles---OOP/issues"
+  },
+  "homepage": "https://github.com/jlamb88/10-Team-Profiles---OOP#readme"
+}
