@@ -20,12 +20,17 @@ body {
 }
 
 a {
-    color: #082f38;
+    color: #2a69f2;
     text-decoration: none;
 }
 
 p {
     font-size: 1.0rem;
+    color: #2a607c;
+    border: 1.8px solid #bae0e9ec;
+    padding: 0.3em;
+    margin-bottom: -0.1em;
+    background-color: white;
 }
 
 .float-left {
@@ -62,17 +67,19 @@ p {
 .card {
     opacity: .8;
     box-shadow: 0 8px 12px 0 rgba(42, 42, 44, 0.144);
+    background: rgba(244, 244, 244, 0.921);
 }
 
 .card-header {
     background-color: rgb(153, 137, 123);
-    text-align: center;
+    text-align: left;
     color: white;
     font-size: larger;
 }
 
 .card-body {
-    background: rgba(244, 244, 244, 0.921);
+
+    background-color: whitesmoke;
 }
 
 #icon {

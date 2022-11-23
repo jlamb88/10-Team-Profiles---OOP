@@ -3,10 +3,11 @@
 function makeManager(data) {
     manager = (data.map((data) => {
         if (data.getRole() === "Manager") {
-            return `<div class="card m-2" style = "height: 22rem; width: 18rem">
-            <div class="card-header">${data.name}</div>
-            <div class="card-body">
-                <p><i class="fa-solid fa-coffee" id="icon"></i>Manager</p>
+            return `<div class="card m-2" style = "height: 22rem; width: 20rem">
+            <div class="card-header"><h3>${data.name}</h3>
+            <h5><i class="fa-solid fa-coffee" id="icon"></i>Manager</h5>
+            </div>
+            <div class="card-body my-4 mx-2">
                 <p>Employee ID: ${data.id}</p>
                 <p>Email: <a href='mailTo:${data.email}'>${data.email}</a></p>
                 <p>Office: ${data.office}</p>
@@ -20,12 +21,13 @@ function makeEngineers(data) {
     engineers = (data.map((data) => {
         if (data.getRole() === "Engineer") {
             return `<div class = "card m-2" style = "height: 22rem; width: 18rem">
-            <div class="card-header">${data.name}</div>
-            <div class="card-body">
-                <p><i class="fa-solid fa-keyboard" id="icon"></i>Engineer</p>
+            <div class="card-header"><h3>${data.name}</h3>
+            <h5><i class="fa-solid fa-keyboard" id="icon"></i>Engineer</h5>
+            </div>
+            <div class="card-body my-4 mx-2">
                 <p>Employee ID: ${data.id}</p>
                 <p>Email: <a href='mailTo:${data.email}'>${data.email}</a></p>
-                <p>Github: ${data.github}</p>
+                <p>Github: <a href='http://github.com/${data.github}'> ${data.github}</a></p>
             </div>
             </div>`
         }
@@ -35,13 +37,15 @@ function makeEngineers(data) {
 function makeInterns(data) {
     interns = (data.map((data) => {
         if (data.getRole() === "Intern") {
-            return `<div class = "card m-2" style = "height: 22rem; width: 18rem">
-            <div class="card-header">${data.name}</div>
-            <div class="card-body">
-                <p><i class="fa-solid fa-user-graduate" id="icon"></i>Intern</p>
-                <p>Employee ID: ${data.id}</p>
-                <p>Email: <a href='mailTo:${data.email}'>${data.email}</a></p>
-                <p>School: ${data.school}</p>
+            return `<div class = "card m-2" style = "height: 20rem; width: 16rem">
+            <div class="card-header">
+            <h3>${data.name}</h3>
+            <h5><i class="fa-solid fa-user-graduate" id="icon"></i>Intern</h5>
+            </div>
+            <div class="card-body mx-2 my-4">
+                <li>Employee ID: ${data.id}</li>
+                <li>Email: <a href='mailTo:${data.email}'>${data.email}</a></li>
+                <li>School: ${data.school}</li>
             </div>
             </div>`
         }
