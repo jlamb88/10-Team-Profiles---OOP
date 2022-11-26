@@ -41,7 +41,7 @@ THEN I exit the application, and the HTML is generated
 
 ## Installation
 - Github: https://github.com/jlamb88/10-Team-Profiles---OOP.git
-- URL: Walkthrough: https://app.castify.com/watch/6afa6807-f824-4602-a0d9-fa1eee75face
+- URL: Walkthrough: https://app.castify.com/view/6afa6807-f824-4602-a0d9-fa1eee75face
 
 ## Usage
   NPM packages: Inquirer
